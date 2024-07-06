@@ -6,14 +6,14 @@ const FormStepper = () => {
   const location = useLocation();
 
   const getCurrentPath = () => {
-    return location.pathname.split("/")[1]; 
+    return location.pathname.split("/")[1];
   };
 
   return (
     <div className="flex flex-row justify-between items-center p-[3px] border border-neutral-300 rounded-full">
       <a
         className={`hover:bg-neutral-100 flex flex-row justify-center items-center gap-2 py-1 px-10 rounded-full ${
-          getCurrentPath() === "content" ? "bg-neutral-200 " : ""
+          getCurrentPath() === "" ? "bg-neutral-200 " : ""
         }`}
         href="/"
       >
