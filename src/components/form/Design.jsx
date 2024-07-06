@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormStepper from "../../components/Stepper/FormStepper";
+import FormStepper from "../stepper/FormStepper";
 import { GoChevronLeft } from "react-icons/go";
 import { ColorPicker, Input, Select } from "antd";
 import { AiOutlineFontSize } from "react-icons/ai";

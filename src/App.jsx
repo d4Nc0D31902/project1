@@ -34,9 +34,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Routes>
-        <Route path="/" element={<Home />} exact="true" />
+        // * Home * //
+        {/* <Route path="/" element={<Home />} exact="true" /> */}
         // * User * //
         <Route path="/login" element={<Login />} exact="true" />
         <Route path="/register" element={<Register />} exact="true" />
@@ -78,7 +79,7 @@ const App = () => {
           exact="true"
         />
         {/* Form */}
-        <Route path="/content" element={<Content />} exact="true" />
+        <Route path="/" element={<Content />} exact="true" />
         <Route path="/design" element={<Design />} exact="true" />
         <Route path="/settings" element={<Settings />} exact="true" />
       </Routes>

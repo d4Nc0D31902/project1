@@ -5,16 +5,17 @@ import { useLocation } from "react-router-dom";
 const FormStepper = () => {
   const location = useLocation();
 
-  // Function to extract the current path from location
   const getCurrentPath = () => {
-    return location.pathname.split("/")[1]; // Adjust this logic based on your route structure
+    return location.pathname.split("/")[1]; 
   };
 
   return (
     <div className="flex flex-row justify-between items-center p-[3px] border border-neutral-300 rounded-full">
       <a
-        className={`hover:bg-neutral-100 flex flex-row justify-center items-center gap-2 py-1 px-10 rounded-full ${getCurrentPath() === 'content' ? 'bg-neutral-200 ' : ''}`}
-        href="/content"
+        className={`hover:bg-neutral-100 flex flex-row justify-center items-center gap-2 py-1 px-10 rounded-full ${
+          getCurrentPath() === "content" ? "bg-neutral-200 " : ""
+        }`}
+        href="/"
       >
         <div className="flex items-center">
           <IoDocumentTextOutline size={18} color="#404040" />
@@ -25,7 +26,9 @@ const FormStepper = () => {
         </div>
       </a>
       <a
-        className={`hover:bg-neutral-100 flex flex-row justify-center items-center gap-2 py-1 px-10 rounded-full ${getCurrentPath() === 'design' ? 'bg-neutral-200 ' : ''}`}
+        className={`hover:bg-neutral-100 flex flex-row justify-center items-center gap-2 py-1 px-10 rounded-full ${
+          getCurrentPath() === "design" ? "bg-neutral-200 " : ""
+        }`}
         href="/design"
       >
         <div className="flex items-center">
@@ -37,7 +40,9 @@ const FormStepper = () => {
         </div>
       </a>
       <a
-        className={`hover:bg-neutral-100 flex flex-row justify-center items-center gap-2 py-1 px-10 rounded-full ${getCurrentPath() === 'settings' ? 'bg-neutral-200 ' : ''}`}
+        className={`hover:bg-neutral-100 flex flex-row justify-center items-center gap-2 py-1 px-10 rounded-full ${
+          getCurrentPath() === "settings" ? "bg-neutral-200 " : ""
+        }`}
         href="/settings"
       >
         <div className="flex items-center">

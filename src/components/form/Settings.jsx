@@ -1,5 +1,5 @@
 import React from "react";
-import FormStepper from "../../components/Stepper/FormStepper";
+import FormStepper from "../stepper/FormStepper";
 import { GoChevronLeft } from "react-icons/go";
 
 const Settings = () => {

@@ -1,5 +1,5 @@
-import React from "react";
-import FormStepper from "../../components/Stepper/FormStepper";
+import React, { useState } from "react";
+import FormStepper from "../../components/stepper/FormStepper";
 import { GoChevronLeft } from "react-icons/go";
 import { ColorPicker, Input, Select } from "antd";
 import { AiOutlineFontSize } from "react-icons/ai";
@@ -9,8 +9,33 @@ import { FaAlignLeft } from "react-icons/fa";
 import { FaAlignJustify } from "react-icons/fa";
 import { FaAlignRight } from "react-icons/fa";
 import { PiPencilSimpleLine } from "react-icons/pi";
+import { Box, Paper, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import LaptopIcon from "@mui/icons-material/Laptop";
+import TvIcon from "@mui/icons-material/Tv";
+import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
 
 const Content = () => {
+  const [selectedDevice, setSelectedDevice] = useState("laptop");
+
+  const handleDeviceChange = (event, newDevice) => {
+    if (newDevice !== null) {
+      setSelectedDevice(newDevice);
+    }
+  };
+
+  const getPaperStyle = () => {
+    switch (selectedDevice) {
+      case "laptop":
+        return { width: "100%", height: "80%" };
+      case "tv":
+        return { width: "100%", height: "90%" };
+      case "phone":
+        return { width: "50%", height: "70%" };
+      default:
+        return { width: "100%", height: "80%" };
+    }
+  };
+
   return (
     <div className="flex flex-col bg-white h-screen">
       <div className="flex flex-row items-center justify-between p-4 border-b border-neutral-900">
@@ -29,8 +54,44 @@ const Content = () => {
       </div>
 
       <div className="flex flex-row flex-grow">
+        {/* Left Panel */}
         <div className="w-1/5 border-r border-neutral-900 h-full"></div>
-        <div className="w-3/5 h-full"></div>
+
+        {/* Center Panel */}
+        <div className="w-3/5 h-full" style={{ padding: "10px" }}>
+          <ToggleButtonGroup
+            value={selectedDevice}
+            exclusive
+            onChange={handleDeviceChange}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "20px",
+            }}
+          >
+            <ToggleButton value="laptop">
+              <LaptopIcon />
+            </ToggleButton>
+            <ToggleButton value="tv">
+              <TvIcon />
+            </ToggleButton>
+            <ToggleButton value="phone">
+              <PhoneAndroidIcon />
+            </ToggleButton>
+          </ToggleButtonGroup>
+
+          <Paper
+            elevation={6}
+            sx={{
+              ...getPaperStyle(),
+              borderRadius: "20px",
+              marginLeft: "auto",
+              marginRight: "auto",
+            }}
+          />
+        </div>
+
+        {/* Right Panel */}
         <div className="w-1/5 border-l border-neutral-900 h-full">
           <div className="flex flex-row ">
             <div className="flex items-center justify-center grow p-3 bg-neutral-200 hover:bg-neutral-100">
