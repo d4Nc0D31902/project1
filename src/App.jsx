@@ -22,9 +22,9 @@ import ForgotPassword from "./components/user/ForgotPassword.jsx";
 import NewPassword from "./components/user/NewPassword.jsx";
 
 // Form
-import Content from "./pages/Form/Content.jsx";
-import Design from "./pages/Form/Design.jsx";
-import Settings from "./pages/Form/Settings.jsx";
+import Content from "./components/form/Content.jsx";
+import Design from "./components/form/Design.jsx";
+import Settings from "./components/form/Settings.jsx";
 
 const App = () => {
   useEffect(() => {
