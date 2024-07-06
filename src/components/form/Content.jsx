@@ -9,7 +9,13 @@ import { FaAlignLeft } from "react-icons/fa";
 import { FaAlignJustify } from "react-icons/fa";
 import { FaAlignRight } from "react-icons/fa";
 import { PiPencilSimpleLine } from "react-icons/pi";
-import { Box, Paper, ToggleButton, ToggleButtonGroup } from "@mui/material";
+import {
+  Box,
+  Paper,
+  Stack,
+  ToggleButton,
+  ToggleButtonGroup,
+} from "@mui/material";
 import LaptopIcon from "@mui/icons-material/Laptop";
 import TvIcon from "@mui/icons-material/Tv";
 import PhoneAndroidIcon from "@mui/icons-material/PhoneAndroid";
@@ -88,7 +94,9 @@ const Content = () => {
               marginLeft: "auto",
               marginRight: "auto",
             }}
-          />
+          >
+            <Stack></Stack>
+          </Paper>
         </div>
 
         {/* Right Panel */}
