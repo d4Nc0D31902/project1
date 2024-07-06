@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <Box sx={{ height: "100vh" }} >
       <MetaData title={"Home"} />
-      <p className="text-red-500">Homeasd</p>
+      <p className="text-red-500">Home</p>
     </Box>
   );
 };

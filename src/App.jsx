@@ -21,8 +21,6 @@ import UpdatePassword from "./components/user/UpdatePassword.jsx";
 import ForgotPassword from "./components/user/ForgotPassword.jsx";
 import NewPassword from "./components/user/NewPassword.jsx";
 
-
-
 // Form
 import Content from "./pages/Form/Content.jsx";
 import Design from "./pages/Form/Design.jsx";
@@ -36,12 +34,8 @@ const App = () => {
 
   return (
     <div className="App">
-      {/* <Header /> */}
+      <Header />
       <Routes>
-        <Route path="/content" element={<Content />} exact="true" />
-        <Route path="/design" element={<Design />} exact="true" />
-        <Route path="/settings" element={<Settings />} exact="true" />
-
         <Route path="/" element={<Home />} exact="true" />
         // * User * //
         <Route path="/login" element={<Login />} exact="true" />
@@ -83,6 +77,10 @@ const App = () => {
           element={<NewPassword />}
           exact="true"
         />
+        {/* Form */}
+        <Route path="/content" element={<Content />} exact="true" />
+        <Route path="/design" element={<Design />} exact="true" />
+        <Route path="/settings" element={<Settings />} exact="true" />
       </Routes>
       {/* {!loading && (!isAuthenticated || user.role !== "admin") && <Footer />} */}
       {/* <Footer /> */}

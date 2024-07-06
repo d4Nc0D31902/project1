@@ -22,10 +22,7 @@ import {
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PersonIcon from "@mui/icons-material/Person";
 import LogoutIcon from "@mui/icons-material/Logout";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import ConstructionIcon from "@mui/icons-material/Construction";
-import HomeRepairServiceIcon from "@mui/icons-material/HomeRepairService";
-import StoreIcon from "@mui/icons-material/Store";
+import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
 import ReceiptIcon from "@mui/icons-material/Receipt";
 
 import "../../App.css";
@@ -48,7 +45,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="sticky" sx={{ backgroundColor: "maroon" }}>
+    <AppBar position="static">
       <Toolbar>
         <Stack
           direction={"row"}
@@ -58,14 +55,16 @@ const Header = () => {
         >
           <Box>
             <Link to="/" style={{ textDecoration: "none", color: "white" }}>
-              <img
-                src="/public/vite.svg"
-                style={{ width: "50px", height: "50px", margin: "10px" }}
-              />
+              Logo
             </Link>
           </Box>
         </Stack>
         <Box sx={{ flexGrow: 1 }} />
+        <IconButton sx={{ color: "white" }}>
+          <Link to="/content">
+            <DashboardCustomizeIcon />
+          </Link>
+        </IconButton>
         {user ? (
           <div>
             <IconButton
