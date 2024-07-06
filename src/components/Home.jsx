@@ -4,9 +4,9 @@ import MetaData from "./layout/MetaData";
 
 const Home = () => {
   return (
-    <Box sx={{ height: "100vh" }}>
+    <Box sx={{ height: "100vh" }} >
       <MetaData title={"Home"} />
-      Home
+      <p className="text-red-500">Homeasd</p>
     </Box>
   );
 };
