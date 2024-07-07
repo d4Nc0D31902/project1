@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import FormStepper from "../../components/stepper/FormStepper";
+import FormStepper from "../Stepper/FormStepper";
 import { GoChevronLeft } from "react-icons/go";
 import { ColorPicker, Input, Select } from "antd";
 import { AiOutlineFontSize } from "react-icons/ai";
@@ -9,6 +9,8 @@ import { FaAlignLeft } from "react-icons/fa";
 import { FaAlignJustify } from "react-icons/fa";
 import { FaAlignRight } from "react-icons/fa";
 import { PiPencilSimpleLine } from "react-icons/pi";
+import { FaMagnifyingGlass } from "react-icons/fa6";
+import { IoDocumentTextOutline } from "react-icons/io5";
 import {
   Box,
   Paper,
@@ -44,6 +46,7 @@ const Content = () => {
 
   return (
     <div className="flex flex-col bg-white h-screen">
+      {/* Navbar */}
       <div className="flex flex-row items-center justify-between p-4 border-b border-neutral-900">
         <div className="flex flex-row items-center gap-1">
           <GoChevronLeft size={38} />
@@ -61,7 +64,119 @@ const Content = () => {
 
       <div className="flex flex-row flex-grow">
         {/* Left Panel */}
-        <div className="w-1/5 border-r border-neutral-900 h-full"></div>
+        <div className="w-1/5 border-r border-neutral-900 h-full flex flex-col p-6">
+          <div>
+            <Input
+              placeholder="Search Fields"
+              variant="filled"
+              size="large"
+              prefix={
+                <FaMagnifyingGlass
+                  style={{
+                    color: "rgba(0,0,0,.25)",
+                  }}
+                />
+              }
+            />
+          </div>
+
+          <div className="flex-1 flex flex-col gap-8 mt-8 ">
+            {/* General */}
+            <div>
+              <div>
+                <p className="font-semibold">General</p>
+              </div>
+
+              <div className="grid grid-cols-2 grid-rows-auto">
+                <div className="flex flex-row items-center gap-2 grow border-r border-b border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Name</p>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 grow border-b border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Text</p>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 grow border-r border-b border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Email</p>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 grow border-b border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Phone</p>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 grow border-r border-b border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">URL</p>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 grow border-b border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Dropdown</p>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 grow border-r border-b border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Number</p>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 grow border-b border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Checkbox</p>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 grow border-r border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Radio</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Advanced */}
+            <div>
+              <p className="font-semibold">Advanced</p>
+
+              <div className="grid grid-cols-2 grid-rows-auto">
+                <div className="flex flex-row items-center gap-2 grow border-r border-b border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Spacer</p>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 grow border-b border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Divider</p>
+                </div>
+
+                <div className="flex flex-row items-center gap-2 grow border-r  border-dashed p-4">
+                  <IoDocumentTextOutline size={34} />
+
+                  <p className="text-lg">Column</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Button */}
+            <div className="flex-1 flex flex-col justify-end">
+              <div className="px-full border border-neutral-500 py-2 rounded-lg flex justify-center">
+                <p className="font-semibold">Preview</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Center Panel */}
         <div className="w-3/5 h-full" style={{ padding: "10px" }}>
