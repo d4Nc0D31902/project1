@@ -36,9 +36,7 @@ const App = () => {
     <div className="App">
       {/* <Header /> */}
       <Routes>
-        // * Home * //
         {/* <Route path="/" element={<Home />} exact="true" /> */}
-        // * User * //
         <Route path="/login" element={<Login />} exact="true" />
         <Route path="/register" element={<Register />} exact="true" />
         <Route
