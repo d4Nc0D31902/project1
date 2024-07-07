@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import FormStepper from "../stepper/FormStepper";
+import FormStepper from "../Stepper/FormStepper";
 import { GoChevronLeft } from "react-icons/go";
-import { ColorPicker, Input, Select } from "antd";
+import { ColorPicker, Input, Select, Radio } from "antd";
 import { AiOutlineFontSize } from "react-icons/ai";
 import { RxFontItalic } from "react-icons/rx";
 import { RxFontBold } from "react-icons/rx";
@@ -16,6 +16,7 @@ const Design = () => {
 
   return (
     <div className="flex flex-col bg-white h-screen">
+      {/* Navbar */}
       <div className="flex flex-row items-center justify-between p-4 border-b border-neutral-900">
         <div className="flex flex-row items-center gap-1">
           <GoChevronLeft size={38} />
@@ -33,7 +34,121 @@ const Design = () => {
 
       <div className="flex flex-row flex-grow">
         {/* left panel */}
-        <div className="w-4/5 h-full"></div>
+        <div className="w-4/5 bg-neutral-200 py-8 px-6">
+          {/* form */}
+          <div className="h-5/6 w-2/5">
+            <div className="flex flex-row gap-1">
+              <div className="bg-white rounded-t-lg px-6 py-2 border-b">
+                Step 1
+              </div>
+              <div className="bg-white rounded-t-lg px-6 py-2 border-b">
+                Step 2
+              </div>
+            </div>
+
+            <div className="bg-white p-8 space-y-4 rounded-r-lg rounded-b-lg">
+              <div>
+                <p>Untitled Form</p>
+              </div>
+
+              <div className="flex flex-row gap-2">
+                <div className="space-y-1 grow">
+                  <p className="text-xs text-neutral-400">First Name</p>
+                  <Input size="large" placeholder="ex: Juan" className="p-3" />
+                </div>
+
+                <div className="space-y-1 grow">
+                  <p className="text-xs text-neutral-400">Last Name</p>
+                  <Input
+                    size="large"
+                    placeholder="ex: Dela Cruz"
+                    className="p-3"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="space-y-1 grow">
+                  <p className="text-xs text-neutral-400">Email</p>
+                  <Input
+                    size="large"
+                    placeholder="ex: juandelacruz@gmail.com"
+                    className="p-3"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="space-y-1 grow">
+                  <p className="text-xs text-neutral-400">Phone</p>
+                  <Input
+                    size="large"
+                    placeholder="ex: juandelacruz@gmail.com"
+                    className="p-3"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="space-y-1 grow">
+                  <p className="text-xs text-neutral-400">Instagram Tag</p>
+                  <Input
+                    size="large"
+                    placeholder="ex: juandelacruz@gmail.com"
+                    className="p-3"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="space-y-1 grow">
+                  <p className="text-xs text-neutral-500">Category</p>
+
+                  <Select
+                    placeholder="Select Category"
+                    style={{
+                      width: "100%",
+                      height: "50px",
+                    }}
+                    size="large"
+                    options={[
+                      {
+                        value: "Dog",
+                        label: "Dog",
+                      },
+                      {
+                        value: "Cat",
+                        label: "Cat",
+                      },
+                    ]}
+                  />
+                </div>
+              </div>
+
+              <div>
+                <div className="space-y-2 grow">
+                  <p className="text-xs text-neutral-500">Radio</p>
+
+                  <Radio.Group>
+                    <Radio value={1}>Selection A</Radio>
+                    <Radio value={2}>Selection B</Radio>
+                    <Radio value={3}>Selection C</Radio>
+                    <Radio value={4}>Selection D</Radio>
+                  </Radio.Group>
+                </div>
+              </div>
+
+              <div className="flex flex-row justify-end pt-3">
+                <div className="border border-neutral-500 w-fit px-8 py-2 rounded-full">
+                  <p>Submit</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* background image */}
+          <div></div>
+        </div>
 
         {/* right panel */}
         <div className="w-1/5 border-l border-neutral-900 h-full">
