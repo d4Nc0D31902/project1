@@ -661,3 +661,9 @@ ul.CTAs a {
   color: grey;
 }
 
+.custom-switch.ant-switch {
+  background-color: #d9d9d9 !important; /* Gray color for unchecked state */
+}
+.custom-switch.ant-switch-checked {
+  background-color: #52c41a !important; /* Green color for checked state */
+}
